@@ -11,6 +11,7 @@ export const assertButtonVisible = ({ text }) =>
     text,
     assert: maybeButton => expect(maybeButton).not.toBeNull(),
   });
+
 export const assertButtonInvisible = ({ text }) =>
   assertButtonVisibility({
     text,
