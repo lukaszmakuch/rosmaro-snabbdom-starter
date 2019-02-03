@@ -1,0 +1,39 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "cross-env NODE_ENV=development parcel --no-hmr index.html",
+    "build": "parcel build index.html",
+    "test": "jest --watch",
+    "rosmaro-bindings": "rosmaro-tools bindings:build src/components/root/bindings",
+    "prettier:check": "prettier --single-quote --trailing-comma es5 --check \"{src,test}/**/*.js\"",
+    "prettier:format": "prettier --single-quote --trailing-comma es5 --write \"{src,test}/**/*.js\""
+  },
+  "dependencies": {
+    "parcel-bundler": "^1.10.3",
+    "redux": "^4.0.1",
+    "redux-saga": "^0.16.2",
+    "rosmaro": "^0.8.4",
+    "rosmaro-binding-utils": "0.0.9",
+    "rosmaro-redux": "0.0.3",
+    "snabbdom": "^0.7.2",
+    "snabbdom-signature": "0.0.2"
+  },
+  "devDependencies": {
+    "prettier": "1.16.1",
+    "babel-core": "^6.26.3",
+    "cross-env": "^5.2.0",
+    "jest": "^23.6.0",
+    "jest-dom": "^3.0.0",
+    "redux-devtools-extension": "^2.13.6",
+    "redux-mock-store": "^1.5.3",
+    "rosmaro-testing-library": "0.0.1",
+    "rosmaro-tools": "0.0.3",
+    "snabbdom-testing-library": "0.0.1"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^~(.*)$": "<rootDir>$1"
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/jest-setup.js"
+  }
+}

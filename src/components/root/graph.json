@@ -1,0 +1,35 @@
+{
+  "main": {
+    "type": "graph",
+    "nodes": {
+      "On": "On",
+      "Off": "Off"
+    },
+    "arrows": {
+      "On": {
+        "clicked": {
+          "target": "Off",
+          "entryPoint": "start"
+        }
+      },
+      "Off": {
+        "clicked": {
+          "target": "On",
+          "entryPoint": "start"
+        }
+      }
+    },
+    "entryPoints": {
+      "start": {
+        "target": "On",
+        "entryPoint": "start"
+      }
+    }
+  },
+  "On": {
+    "type": "leaf"
+  },
+  "Off": {
+    "type": "leaf"
+  }
+}
