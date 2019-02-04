@@ -1,15 +1,6 @@
-import { isEffect } from 'rosmaro-redux';
-import { put, takeEvery, all } from 'redux-saga/effects';
-const matchEffect = type => action => isEffect(action) && action.type === type;
-
-const dispatch = function*({ action }) {
-  yield put(action);
-};
-
-const watchDispatch = function*() {
-  yield takeEvery(matchEffect('DISPATCH'), dispatch);
-};
+import { dispatchActionSaga } from 'rosmaro-redux';
+import { all } from 'redux-saga/effects';
 
 export default function*() {
-  yield all([watchDispatch()]);
+  yield all([dispatchActionSaga()]);
 }
