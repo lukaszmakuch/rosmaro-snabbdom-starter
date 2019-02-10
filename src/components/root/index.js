@@ -3,5 +3,5 @@ import makeBindings from './bindings';
 
 export default opts => ({
   graph,
-  bindings: makeBindings(opts),
+  bindings: makeBindings(opts)
 });

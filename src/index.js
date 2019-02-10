@@ -13,7 +13,7 @@ const dispatch = action => {
 };
 
 const modelDescription = makeRoot({
-  dispatch,
+  dispatch
 });
 
 const model = rosmaro(modelDescription);

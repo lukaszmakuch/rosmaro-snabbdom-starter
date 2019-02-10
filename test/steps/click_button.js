@@ -10,5 +10,5 @@ export default ({ text }) => ({ testContext }) => ({
     fireEvent.click(buttonToClick);
     const actions = testContext.store.getActions();
     return { step: consumeActionsWithEffects(actions) };
-  },
+  }
 });

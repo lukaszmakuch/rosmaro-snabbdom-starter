@@ -2,7 +2,7 @@ import {
   typeHandler,
   defaultHandler,
   partialReturns,
-  targetedActions,
+  targetedActions
 } from 'rosmaro-binding-utils';
 
 export const makeHandler = handlerPlan =>
