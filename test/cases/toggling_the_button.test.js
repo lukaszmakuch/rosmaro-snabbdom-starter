@@ -1,22 +1,22 @@
 import testFlow from '~/test/utils/testFlow';
-import {
-  assertButtonVisible,
-  assertButtonInvisible
-} from '~/test/steps/assert_button_visibility';
-import clickButton from '~/test/steps/click_button';
+import { assertVisible, assertInvisible } from '~/test/steps/assert_visibility';
+import click from '~/test/steps/click';
+import debug from '~/test/steps/debug';
 
 test('toggles On/Off', () =>
   testFlow([
-    assertButtonVisible({ text: 'On' }),
-    assertButtonInvisible({ text: 'Off' }),
+    assertVisible({ text: 'On' }),
+    assertInvisible({ text: 'Off' }),
 
-    clickButton({ text: 'On' }),
+    click({ text: 'On' }),
 
-    assertButtonInvisible({ text: 'On' }),
-    assertButtonVisible({ text: 'Off' }),
+    debug,
 
-    clickButton({ text: 'Off' }),
+    assertInvisible({ text: 'On' }),
+    assertVisible({ text: 'Off' }),
 
-    assertButtonVisible({ text: 'On' }),
-    assertButtonInvisible({ text: 'Off' })
+    click({ text: 'Off' }),
+
+    assertVisible({ text: 'On' }),
+    assertInvisible({ text: 'Off' })
   ]));
