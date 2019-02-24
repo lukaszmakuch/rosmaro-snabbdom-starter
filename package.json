@@ -5,7 +5,7 @@
     "build": "parcel build index.html",
     "test": "jest --watch",
     "rosmaro-bindings:generate": "rosmaro-tools bindings:build src/components/root/bindings",
-    "rosmaro-bindings:watch": "onchange '**/graph.json' -- npm run rosmaro-bindings:generate",
+    "rosmaro-bindings:watch": "npm run rosmaro-bindings:generate && onchange '**/graph.json' -- npm run rosmaro-bindings:generate",
     "prettier:check": "prettier --check \"{src,test}/**/*.js\"",
     "prettier:format": "prettier --write \"{src,test}/**/*.js\"",
     "lint": "eslint src test"
