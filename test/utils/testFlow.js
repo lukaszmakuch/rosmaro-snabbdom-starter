@@ -4,7 +4,7 @@ import configureStore from 'redux-mock-store';
 import rosmaro from 'rosmaro';
 import makeRender from '~/test/utils/render';
 
-export default flow => {
+export default flow => () => {
   let store = configureStore([])({});
   const model = rosmaro(makeRoot({ ...store }));
   let getDispatchedActions = () => {
