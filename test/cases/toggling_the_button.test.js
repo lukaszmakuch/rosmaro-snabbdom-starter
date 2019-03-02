@@ -3,19 +3,22 @@ import { assertVisible, assertInvisible } from '~/test/steps/assert_visibility';
 import click from '~/test/steps/click';
 import debug from '~/test/steps/debug';
 
-test('toggles On/Off', testFlow([
-  assertVisible({ text: 'On' }),
-  assertInvisible({ text: 'Off' }),
+test(
+  'toggles On/Off',
+  testFlow([
+    assertVisible({ text: 'On' }),
+    assertInvisible({ text: 'Off' }),
 
-  click({ text: 'On' }),
+    click({ text: 'On' }),
 
-  debug,
+    debug,
 
-  assertInvisible({ text: 'On' }),
-  assertVisible({ text: 'Off' }),
+    assertInvisible({ text: 'On' }),
+    assertVisible({ text: 'Off' }),
 
-  click({ text: 'Off' }),
+    click({ text: 'Off' }),
 
-  assertVisible({ text: 'On' }),
-  assertInvisible({ text: 'Off' })
-]));
+    assertVisible({ text: 'On' }),
+    assertInvisible({ text: 'Off' })
+  ])
+);

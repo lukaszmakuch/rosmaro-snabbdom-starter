@@ -1,8 +1,6 @@
 module.exports = {
-    "plugins": ["prettier"],
-    "rules": {
-        "prettier/prettier": "error",
-    },
+    "plugins": [],
+    "rules": {},
     "env": {
         "browser": true,
         "node": true,
@@ -13,7 +11,6 @@ module.exports = {
         "sourceType": "module"
     },
     "extends": [
-        "prettier",
         "eslint:recommended"
     ]
 };

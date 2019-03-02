@@ -6,8 +6,6 @@
     "test": "jest --watch",
     "rosmaro-bindings:generate": "rosmaro-tools bindings:build src/components/root/bindings",
     "rosmaro-bindings:watch": "npm run rosmaro-bindings:generate && onchange '**/graph.json' -- npm run rosmaro-bindings:generate",
-    "prettier:check": "prettier --check \"{src,test}/**/*.js\"",
-    "prettier:format": "prettier --write \"{src,test}/**/*.js\"",
     "lint": "eslint src test"
   },
   "dependencies": {
@@ -25,11 +23,8 @@
     "babel-core": "^6.26.3",
     "cross-env": "^5.2.0",
     "eslint": "^5.13.0",
-    "eslint-config-prettier": "^4.0.0",
-    "eslint-plugin-prettier": "^3.0.1",
     "jest": "^23.6.0",
     "jest-dom": "^3.0.0",
-    "prettier": "^1.16.1",
     "redux-devtools-extension": "^2.13.6",
     "redux-mock-store": "^1.5.3",
     "rosmaro-testing-library": "0.0.1",
