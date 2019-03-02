@@ -1,3 +1,3 @@
-import { makeBinding } from '../lib/button';
+import {makeBinding} from '../lib/button';
 
-export default makeBinding({ text: 'Off' });
+export default makeBinding({text: 'Off'});

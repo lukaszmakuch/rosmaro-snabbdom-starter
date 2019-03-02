@@ -1,4 +1,4 @@
-import { denyUnlessSigned, signingH } from 'snabbdom-signature';
+import {denyUnlessSigned, signingH} from 'snabbdom-signature';
 export const h = signingH(require('snabbdom/h').default);
 const snabbdom = require('snabbdom');
 export const patch = snabbdom.init([

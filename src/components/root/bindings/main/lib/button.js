@@ -1,18 +1,13 @@
-import { h } from '~/src/utils/vdom';
-import { makeHandler } from '~/src/utils/handlers';
+import {h} from '~/src/utils/vdom';
+import {makeHandler} from '~/src/utils/handlers';
 
-export const makeBinding = ({ text }) => ({ dispatch }) => ({
-  handler: makeHandler({
-    CLICK: () => ({ arrow: 'clicked' }),
+export const makeBinding = ({text}) => ({dispatch}) => ({handler: makeHandler({
 
-    // eslint-disable-next-line no-unused-vars
-    RENDER: ({ context, action, children, toNode }) =>
-      h(
-        'button.main-action-button',
-        {
-          on: { click: () => dispatch(toNode({ type: 'CLICK' })) }
-        },
-        text
-      )
-  })
-});
+  CLICK: () => ({arrow: 'clicked'}),
+
+  // eslint-disable-next-line no-unused-vars
+  RENDER: ({context, action, children, toNode}) => h('button.main-action-button', {
+      on: {click: () => dispatch(toNode({type: 'CLICK'}))}
+   }, text)
+
+})});

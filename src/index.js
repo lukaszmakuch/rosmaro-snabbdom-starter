@@ -1,9 +1,9 @@
 import rosmaro from 'rosmaro';
-import { createStore, applyMiddleware } from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import makeRoot from './components/root/index';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import { makeReducer, effectDispatcher } from 'rosmaro-redux';
-import { patch } from '~/src/utils/vdom';
+import {composeWithDevTools} from 'redux-devtools-extension';
+import {makeReducer, effectDispatcher} from 'rosmaro-redux';
+import {patch} from '~/src/utils/vdom';
 import createSagaMiddleware from 'redux-saga';
 import rootSaga from './sagas';
 
@@ -33,10 +33,10 @@ dispatchFn = store.dispatch;
 const container = document.getElementById('root');
 
 let lastView = container;
-const renderAction = { type: 'RENDER' };
+const renderAction = {type: 'RENDER'};
 const refreshView = () => {
-  const { state } = store.getState();
-  const newView = model({ state, action: renderAction }).result.data;
+  const {state} = store.getState();
+  const newView = model({state, action: renderAction}).result.data;
   patch(lastView, newView);
   lastView = newView;
 };
