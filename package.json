@@ -29,7 +29,7 @@
     "jest-dom": "^3.0.0",
     "redux-devtools-extension": "^2.13.6",
     "redux-mock-store": "^1.5.3",
-    "rosmaro-testing-library": "0.0.3",
+    "rosmaro-testing-library": "0.0.4",
     "rosmaro-tools": "0.0.3",
     "snabbdom-testing-library": "0.0.1"
   },
