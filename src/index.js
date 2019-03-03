@@ -6,6 +6,7 @@ import {makeReducer, effectDispatcher} from 'rosmaro-redux';
 import {patch} from '~/src/utils/vdom';
 import createSagaMiddleware from 'redux-saga';
 import rootSaga from './sagas';
+import {triggerEntryActions} from 'rosmaro-binding-utils';
 
 var dispatchFn = () => {};
 const dispatch = action => {
@@ -16,7 +17,7 @@ const modelDescription = makeRoot({
   dispatch
 });
 
-const model = rosmaro(modelDescription);
+const model = triggerEntryActions(rosmaro(modelDescription));
 
 const rootReducer = makeReducer(model);
 const sagaMiddleware = createSagaMiddleware();
