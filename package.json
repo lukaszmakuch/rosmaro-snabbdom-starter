@@ -16,7 +16,7 @@
     "redux": "^4.0.1",
     "redux-saga": "1.x.x",
     "rosmaro": "^0.8.4",
-    "rosmaro-binding-utils": "0.0.11",
+    "rosmaro-binding-utils": "0.0.13",
     "rosmaro-redux": "0.0.5",
     "snabbdom": "^0.7.2",
     "snabbdom-signature": "0.0.2"
