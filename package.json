@@ -7,16 +7,14 @@
     "build": "parcel build index.html",
     "test": "jest --watch",
     "rosmaro-bindings:generate": "rosmaro-tools bindings:build src/components/root/bindings",
-    "rosmaro-bindings:watch": "npm run rosmaro-bindings:generate && onchange '**/graph.json' -- npm run rosmaro-bindings:generate",
     "lint": "eslint src test"
   },
   "dependencies": {
-    "onchange": "^5.2.0",
     "parcel-bundler": "^1.10.3",
     "redux": "^4.0.1",
     "redux-saga": "1.x.x",
     "rosmaro": "^0.8.4",
-    "rosmaro-binding-utils": "0.0.14",
+    "rosmaro-binding-utils": "0.1.0",
     "rosmaro-redux": "0.0.5",
     "snabbdom": "^0.7.2",
     "snabbdom-signature": "0.0.2"
