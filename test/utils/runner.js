@@ -1,10 +1,10 @@
 import makeRoot from '~/src/components/root';
-import { testFlow } from 'rosmaro-testing-library';
+import {testFlow, makeTreeRunner} from 'rosmaro-testing-library';
 import configureStore from 'redux-mock-store';
 import rosmaro from 'rosmaro';
 import makeRender from '~/test/utils/render';
 
-export default flow => () => {
+export const flow = (label, flow) => test(label, () => {
   let store = configureStore([])({});
   const model = rosmaro(makeRoot({ ...store }));
   let getDispatchedActions = () => {
@@ -18,4 +18,6 @@ export default flow => () => {
     flow,
     initialTestContext: { render, getDispatchedActions }
   });
-};
+});
+
+export const tree = makeTreeRunner()(flow);
