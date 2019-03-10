@@ -10,25 +10,26 @@
     "lint": "eslint src test"
   },
   "dependencies": {
-    "parcel-bundler": "^1.10.3",
+    "parcel-bundler": "^1.12.0",
     "redux": "^4.0.1",
     "redux-saga": "1.x.x",
     "rosmaro": "^0.8.4",
     "rosmaro-binding-utils": "0.1.0",
-    "rosmaro-redux": "0.0.5",
-    "snabbdom": "^0.7.2",
-    "snabbdom-signature": "0.0.2"
+    "rosmaro-redux": "0.0.6",
+    "snabbdom": "^0.7.3",
+    "snabbdom-signature": "0.0.3"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
     "cross-env": "^5.2.0",
-    "eslint": "^5.13.0",
-    "jest": "^23.6.0",
-    "jest-dom": "^3.0.0",
-    "redux-devtools-extension": "^2.13.6",
+    "eslint": "^5.15.1",
+    "jest": "^24.3.1",
+    "jest-dom": "^3.1.2",
+    "redux-devtools-extension": "^2.13.8",
     "redux-mock-store": "^1.5.3",
     "rosmaro-testing-library": "0.0.5",
-    "rosmaro-tools": "0.0.3",
+    "rosmaro-tools": "0.0.4",
     "snabbdom-testing-library": "0.0.1"
   },
   "jest": {
