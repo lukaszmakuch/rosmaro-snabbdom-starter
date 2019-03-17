@@ -42,6 +42,7 @@ const refreshView = () => {
   lastView = newView;
 };
 
+store.dispatch({type: 'ON_ENTRY'});
 store.subscribe(refreshView);
 
 refreshView();
