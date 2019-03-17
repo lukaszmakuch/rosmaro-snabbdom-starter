@@ -1,5 +1,5 @@
 import {flow, tree} from '~/test/utils/runner';
-import { assertVisible, assertInvisible } from '~/test/steps/assert_visibility';
+import {assertVisible, assertInvisible} from '~/test/steps/assert_visibility';
 import click from '~/test/steps/click';
 import debug from '~/test/steps/debug';
 
